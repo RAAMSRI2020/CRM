@@ -1,8 +1,8 @@
 from django.contrib import admin
-from django.urls import path
-from leads.views import *
+from django.urls import path,include
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',home_page)
+    path('leads/',include('leads.urls',namespace='leads'))
 ]
