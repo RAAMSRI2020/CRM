@@ -5,21 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DJCRM</title>
+    "
+    <link href=" https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css " rel="stylesheet ">
 </head>
-<style>
-    .lead {
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 6px;
-        padding-bottom: 6px;
-        margin-top: 10px;
-        background-color: #f6f6f6;
-        width: 100%;
-    }
-</style>
+
 
 <body>
-    {% block content%} {% endblock content %} {% include 'scripts.html' %}
+    <div class="max-w-4xl mx-auto bg-gray-200">
+        {% include 'navbar.html' %}{% block content%} {% endblock content %}
+    </div>
+    {% include 'scripts.html' %}
 </body>
 
 </html>
